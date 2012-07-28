@@ -58,6 +58,10 @@ if (!defined('K_TCPDF_EXTERNAL_CONFIG')) {
 
     // Automatic calculation for the following K_PATH_MAIN constant
     $kPathMain = str_replace('\\', '/', dirname(__FILE__));
+    $kPathMain = dirname($kPathMain).'/'; // remove the current directory
+
+    $kPathMain.= '../../tcpdf/tcpdf/';
+    define('K_PATH_MAIN', $kPathMain);
 
     // Automatic calculation for the following K_PATH_URL constant
     if (isset($_SERVER['HTTP_HOST']) AND (!empty($_SERVER['HTTP_HOST']))) {

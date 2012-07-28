@@ -1,0 +1,33 @@
+{
+    "name": "jwronsky/html2pdf",
+    "type": "library",
+    "description": "Unofficial form of 'html2pdf' with Composer support.",
+    "keywords": ["html", "pdf", "html2pdf"],
+    "homepage": "https://github.com/jwronsky/html2pdf",
+    "license": "LGPL",
+    "authors":
+    [
+        {
+            "name": "Spipu",
+            "homepage": "http://sourceforge.net/users/spipu",
+            "role": "Developer"
+        },
+        {
+            "name": "JWronsky",
+            "homepage": "https://github.com/jwronsky/",
+            "role": "Package maintainer"
+        }
+    ],
+    "require":
+    {
+        "php": ">=5.2",
+        "tcpdf/tcpdf": "5.9.*"
+    },
+    "autoload":
+    {
+        "psr-0":
+        {
+            "HTML2PDF": "."
+        }
+    }
+}

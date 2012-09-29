@@ -16,7 +16,7 @@
     "require":
     {
         "php": ">=5.2",
-        "tcpdf/tcpdf": "5.9.*"
+        "tcpdf-clone/TCPDF-Clone": "5.9.*"
     },
     "autoload":
     {

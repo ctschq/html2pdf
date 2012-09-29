@@ -16,7 +16,7 @@
     "require":
     {
         "php": ">=5.2",
-        "tecnick.com/tcpdf": "5.9.*"
+        "tecnick.com/tcpdf": "dev-master"
     },
     "autoload":
     {

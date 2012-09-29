@@ -8,6 +8,11 @@
     "authors":
     [
         {
+            "name": "Spipu",
+            "homepage": "http://sourceforge.net/users/spipu",
+            "role": "Developer"
+        },
+        {
             "name": "tmaindron",
             "homepage": "http://www.github.com/tmaindron",
             "role": "Developer"

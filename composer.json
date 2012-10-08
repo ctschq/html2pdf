@@ -21,7 +21,7 @@
     "require":
     {
         "php": ">=5.2",
-        "tcpdf/tcpdf": "5.0.002"
+        "tmaindron/tcpdf": "5.0.002"
     },
     "autoload":
     {

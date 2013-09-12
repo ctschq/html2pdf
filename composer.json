@@ -1,7 +1,7 @@
 {
     "name": "ensepar/html2pdf",
     "type": "library",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Unofficial fork of 'html2pdf' with Composer support. (Fixed composer dependency problem)",
     "keywords": ["html", "pdf", "html2pdf"],
     "homepage": "https://github.com/jwronsky/html2pdf",

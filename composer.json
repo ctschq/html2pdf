@@ -21,7 +21,7 @@
     "require":
     {
         "php": ">=5.2",
-        "tecnick.com/tcpdf": "dev-master"
+        "ensepar/tcpdf": "5.0.003"
     },
     "autoload":
     {

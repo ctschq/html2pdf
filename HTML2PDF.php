@@ -6,12 +6,12 @@
  * distributed under the LGPL License
  *
  * @author  Laurent MINGUET <webmaster@html2pdf.fr>
- * @version 4.03
+ * @version 4.04
  */
 
 if (!defined('__CLASS_HTML2PDF__')) {
 
-    define('__CLASS_HTML2PDF__', '4.03');
+    define('__CLASS_HTML2PDF__', '4.04');
 
     require_once(dirname(__FILE__).'/_class/exception.class.php');
     require_once(dirname(__FILE__).'/_class/locale.class.php');
@@ -934,13 +934,13 @@ if (!defined('__CLASS_HTML2PDF__')) {
 
             // create the sub object
             HTML2PDF::$_subobj = new HTML2PDF(
-                                        $this->_orientation,
-                                        $this->_format,
-                                        $this->_langue,
-                                        $this->_unicode,
-                                        $this->_encoding,
-                                        array($this->_defaultLeft,$this->_defaultTop,$this->_defaultRight,$this->_defaultBottom)
-                                    );
+                $this->_orientation,
+                $this->_format,
+                $this->_langue,
+                $this->_unicode,
+                $this->_encoding,
+                array($this->_defaultLeft,$this->_defaultTop,$this->_defaultRight,$this->_defaultBottom)
+            );
 
             // init
             HTML2PDF::$_subobj->setTestTdInOnePage($this->_testTdInOnepage);
@@ -2178,7 +2178,10 @@ if (!defined('__CLASS_HTML2PDF__')) {
                     if (isset($corr[$y][$x]) && is_array($corr[$y][$x]) && $corr[$y][$x][3]>1) {
 
                         // sum the max height of each line in rowspan
-                        $s = 0; for ($i=0; $i<$corr[$y][$x][3]; $i++) $s+= $sh[$y+$i];
+                        $s = 0;
+                        for ($i=0; $i<$corr[$y][$x][3]; $i++) {
+                            $s+= isset($sh[$y+$i]) ? $sh[$y+$i] : 0;
+                        }
 
                         // if the max height is < the height of the cell with rowspan => we adapt the height of each max height
                         if ($s>0 && $s<$cases[$corr[$y][$x][1]][$corr[$y][$x][0]]['h']) {
